@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    /*
+        background-size: 背景的宽度 背景的高度
+        * 如果只给背景的宽度则高度会自适应
+        * 也可以给百分比，它是相对于父盒子的
+        * cover：等比例拉伸，要完全覆盖div盒子 可能有部分背景图片显示不全
+        * contain：高度和宽度等比例拉伸，当宽度或者高度铺满div盒子就不再进行拉伸了，可能会有空白的产生
+    */
+    div {
+      width: 500px;
+      height: 500px;
+      background: url(images/dog.jpg) no-repeat;
+      border: 2px solid pink;
+      background-size: 500px 500px;
+      /*background-size: 500px;*/
+      /*background-size: cover;*/
+      /*background-size: contain;*/
+    }
+  </style>
+</head>
+<body>
+  <div>
+
+  </div>
+</body>
+</html>
