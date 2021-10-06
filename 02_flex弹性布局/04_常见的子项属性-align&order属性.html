@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    /*
+      1.align-self：控制子项自己在侧轴上边的排列方式
+        align-self属性允许单个项目与其他项目不同的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父
+        元素的align-items属性，如果没有父元素，则等同于stretch。
+      2.order：定义项目的排列顺序。  -->   值越小排列越靠前
+        数值越小，排列值越靠前，默认值为0.
+        * 注意：与z-index不同，z-index定义的是浮动的元素上下排列重叠的顺序。
+    */
+    section {
+      display: flex;
+      width: 60%;
+      height: 200px;
+      margin: 0 auto;
+      background-color: pink;
+    }
+    section div {
+      width: 50px;
+      height: 50px;
+      margin: 0 10px;
+      background-color: mediumpurple;
+    }
+    section div:nth-child(2) {
+      align-self: flex-end; /*控制项目在侧轴上的排列方式*/
+      order: -1; /*控制项目在侧轴上的排列顺序*/
+    }
+    section div:nth-child(3) {
+      order: -2;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </section>
+</body>
+</html>

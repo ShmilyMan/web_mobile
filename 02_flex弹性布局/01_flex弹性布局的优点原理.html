@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    /*
+      flex弹性布局的优点：
+        1、操作方便，布局极为简单，移动端应用很广泛（不需要调整浮动，块级元素、清除浮动等）。
+        2、PC端浏览器支持情况较差。
+        3、IE11或更低版本，不支持或仅部分支持。
+
+      flex布局的原理：
+        1、flex是flexble Box的缩写，意为弹性布局，用来为盒状模型提供最大的灵活性，任何容器都可以指定为flex布局。
+        2、当我们为父盒子设置flex布局以后，子元素的float、clear、vertical-align属性将失效。
+        3、flex布局又叫做伸缩布局、弹性布局、伸缩盒布局、弹性盒布局。
+        4、采用flex布局的元素，称为flex容器，简称容器。它的所有子元素自动成为容器成员，称为flex项目，简称“项目”。
+      总结：就是通过给父盒子添加flex属性，来控制子盒子的位置和排列方式。
+    */
+    div {
+      display: flex;  /* 将布局方式改为flex布局 */
+      width: 80%;
+      height: 500px;
+      background-color: pink;
+    }
+    div span {
+      width: 30%;
+      height: 200px;
+      margin-left: 10px;
+      background-color: mediumpurple;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+  </div>
+</body>
+</html>
