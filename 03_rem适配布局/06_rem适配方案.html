@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    /*
+      1.首先我们选择一个标准尺寸 以 750px 为准
+      2.我们用屏幕尺寸 除以 我们划分的份数 得到了HTML里面的文字大小（不同的尺寸下得到的文字的大小是不一样的）
+      3.页面元素的 rem 值 = 页面元素在 750像素下的值 / HTML里面的文字大小
+    */
+    @media screen and (min-width: 320px){
+      html {
+        font-size: 23.33px;
+      }
+    }
+    @media screen and (min-width: 750px){
+      html {
+        font-size: 50px;
+      }
+    }
+    div {
+      width: 2rem;
+      height: 2rem;
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>
