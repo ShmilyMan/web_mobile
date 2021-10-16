@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <!-- 必须的 meta 标签 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap 的 CSS 文件 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>Hello, world!</title>
+    <style>
+      /* 1.栅格选项的参数 */
+      /*div [class^='col'] {
+        border: 1px solid #ccc;
+      }*/
+
+      /* 2.列嵌套 */
+      /*.row>div {
+        background-color: lightpink;
+        height: 80px;
+      }*/
+
+      /* 3.列偏移 */
+      /*.row div {
+        border: 1px solid #ccc;
+      }*/
+
+      /* 4.列排序 */
+      .row div {
+        height: 80px;
+        border: 1px solid #ccc;
+      }
+      .row div:nth-child(1) {
+        background-color: lightpink;
+      }
+      .row div:nth-child(2) {
+        background-color: lightskyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      1.栅格系统简介
+        栅格系统英文名为“grid system”，也有人翻译为“网格系统”，它是指将页面布局划分为等宽的列，然后通过列数的定义来模块化页面布局。
+      Bootstrap提供了一套响应式、移动设备优先的流式栅格系统，随着屏幕或视口（viewport）尺寸的增加，系统会最多分为12列。Bootstrap里面
+      container宽度是固定的，但是不同屏幕下，container的宽度不同，我们再把container划分成12等份。
+
+
+      2.栅格选项参数
+        栅格系统用于通过一系列的行（row）与列（column）的组合来创建布局，自己的内容就可以放入这些创建好的布局中。
+                         超小屏幕（手机）<768px        小屏设备（平板）>=768px     中等屏幕（桌面显示器）>=992px      宽屏设备（大桌面显示器）>=1200px
+      .container最大宽度      自动（100%）                    750px                       970px                           1170px
+      类前缀                   .col-xs-                    .col-sm-                    .col-md-                         .col-lg-
+      列数（column）                                                        12
+      * 行（row）必须放到container容器里面
+      * 我们实现列的划分必须给列添加类前缀
+      * 列大于12，多于的列所在的元素将被作为一个整体另起一行进行排列
+      * 每一列默认有左右15像素的padding
+      * 可以同时为一列指定多个设备的类名，以便划分不同设备的份数 例如：class="col-md-4 col-sm-6"
+      * 当一行的列数小于12时，会流出相应的间隙
+
+
+      3.列嵌套
+        栅格系统内置的栅格系统将内容再次嵌套。简单理解就是一列内再分成若干份的小列。我们可以通过添加一个新的.row元素和一系列.col-sm-*
+      元素到已经存在的.col-sm-*元素内
+      列嵌套最好加1个行row，这样可以取消父元素的padding值而且高度和父级一样高
+
+
+      4.列偏移
+        使用.offset-lg-*类可以将列向右偏移。这些类实际是通过使用*选择器为当前元素增加了左侧的边距（margin-left）
+      5.列排序
+        通过使用order-md-*（指定排序的顺序，从左向右进行排序）类就可以很容易改变列（column）的顺序。
+    -->
+
+    <!-- 1.栅格选项参数 -->
+    <!--<div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">1</div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">2</div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">3</div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">4</div>
+      </div>
+    </div>-->
+
+    <!-- 2.列嵌套 -->
+    <!--<div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-6" style="background-color: lightskyblue;">11</div>
+            <div class="col-md-6" style="background-color: lightskyblue;">12</div>
+          </div>
+        </div>
+        <div class="col-md-4">2</div>
+        <div class="col-md-4">3</div>
+      </div>
+    </div>-->
+
+    <!-- 3.列偏移 -->
+    <!--<div class="container">
+      <div class="row">
+        <div class="col-lg-4">1</div>
+        <div class="col-lg-4 offset-lg-4">2</div>
+      </div>
+    </div>-->
+
+    <!-- 4.列排序 -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 order-md-2">左边</div>
+        <div class="col-md-8 order-md-1">右边</div>
+      </div>
+    </div>
+  </body>
+</html>

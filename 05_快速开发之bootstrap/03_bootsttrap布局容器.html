@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <!-- 必须的 meta 标签 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap 的 CSS 文件 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>Hello, world!</title>
+    <style>
+      .class1 {
+        height: 150px;
+        background-color: lightskyblue;
+      }
+      .class2 {
+        height: 150px;
+        background-color: lightpink;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      BootStrap需要为页面内容和栅格系统包裹一个container容器，Bootstrap预先定义好了这个类，叫.container,
+      它提供了两个做此用处的类
+      1.container类
+        * 响应式布局的容器 固定宽度
+        * 大屏（>=1200px）宽度定为1170px
+        * 中屏（>=992px）宽度定为970px
+        * 小屏（>=768px）宽度定为750px
+        * 超小屏（100%）
+      2.container-fluid类
+        * 流式布局 百分百宽度
+        * 占据全部视口（viewport）的容器
+        * 适合于单独做移动端开发
+    -->
+    <div class="container class1"></div>
+    <div class="container-fluid class2"></div>
+  </body>
+</html>

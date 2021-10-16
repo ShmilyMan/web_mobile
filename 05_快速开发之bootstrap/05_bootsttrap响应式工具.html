@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <!-- 必须的 meta 标签 -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap 的 CSS 文件 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <title>Hello, world!</title>
+    <style>
+      .row div {
+        height: 80px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      为了加快对移动设备友好的页面开发工作，利用媒体查询功能，并使用这些工具类可以方便的针对不同设备展示或隐藏页面内容
+      https://blog.csdn.net/anning4877/article/details/104488869
+      类名            超小屏             小屏              中屏              大屏
+      .d-xs-none      隐藏              可见              可见              可见
+      .d-sm-none      可见              隐藏              可见              可见
+      .d-md-none      可见              可见              隐藏              可见
+      .d-lg-none      可见              可见              可见              隐藏
+      与之相反，d-**-block是显示某个页面的内容
+      注意：他们一般都是连接在一起使用
+    -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <span class="d-none d-lg-block">啊啊啊啊啊啊啊啊啊啊啊</span>
+        </div>
+        <div class="col-md-3">2</div>
+        <div class="col-md-3 d-none d-xl-block">3</div>
+        <div class="col-md-3">4</div>
+      </div>
+    </div>
+  </body>
+</html>
